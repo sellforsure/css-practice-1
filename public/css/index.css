@@ -1,7 +1,68 @@
-html {
-  max-width: 720px;
+.card {
+  color: red;
+}
+
+.card > p {
+  color: rgb(128, 0, 0);
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px blue;
+}
+
+p:focus,
+p:active,
+p:hover {
+  -webkit-text-fill-color: rgb(0, 255, 8);
+  -webkit-text-stroke: 1px blue;
+  direction: rtl;
+}
+
+#test {
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+  -webkit-text-stroke: inherit;
+  text-align: justify;
+  letter-spacing: 0.01em;
+}
+
+span {
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: underline solid red;
+  text-decoration-color: blue;
+}
+span:hover {
+  text-decoration-line: line-through;
+  text-decoration-style: wavy;
+  text-decoration-color: green;
+}
+
+pre {
+  tab-size: 20;
 }
 
 body {
-  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  font-display: swap;
+}
+
+span {
+  font-size: larger;
+  font-weight: lighter;
+  font-style: oblique;
+}
+
+.test {
+  display: none;
+}
+
+.block {
+  display: block;
+  background-color: green;
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  box-sizing: content-box;
 }

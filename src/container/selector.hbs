@@ -1,0 +1,465 @@
+{{!-- /* :root {
+background: rgb(134, 195, 134);
+}
+
+html {
+max-width: 720px;
+
+background: blue;
+}
+
+body {
+background: #ffffff;
+}
+
+* {
+color: red;
+}
+h1 {
+color: blue;
+}
+
+.box {
+background: #bbe77f;
+}
+
+#user,
+.user {
+color: chocolate;
+}
+
+h1.button {
+background: red;
+color: black;
+}
+
+h1,
+h2#user,
+button.button#button {
+color: green;
+}
+
+div > p {
+color: darkmagenta;
+}
+
+footer > .user {
+color: royalblue;
+}
+
+footer > h1 {
+color: royalblue;
+}
+
+footer em.child,
+footer div.child {
+color: goldenrod;
+}
+
+h1 ~ p {
+background: black;
+} */
+
+/* УРОК 2 */
+/* .card-dark {
+background: #aca5a5;
+}
+
+.item {
+color: green;
+} */
+
+/* .item:first-child {
+color: rgb(22, 10, 133);
+}
+
+.item:last-child {
+color: rgb(22, 10, 133);
+}
+
+(коли один дочірній тег)
+.item:only-child {
+color: rgb(22, 10, 133);
+} */
+
+/* (перший тег типу) */
+/* .item:first-of-type {
+color: blue;
+} */
+
+/* .item:last-of-type {
+color: blue;
+}
+
+.item:only-of-type {
+color: red;
+} */
+/* (2n,3n - кожен другий, третій і тд, + 1(перший), 2(другий) і тд ) */
+/* .item:nth-child(2n - 2) {
+color: yellowgreen;
+}
+
+.item:nth-last-child(3) {
+color: yellowgreen;
+} */
+
+/* .item:nth-of-type(3) {
+color: yellowgreen;
+} */
+
+/* .item:nth-last-of-type(3) {
+color: yellowgreen;
+} */
+
+/* p:not(.item) {
+color: blueviolet;
+} */
+
+/* .item:not(p) {
+color: blueviolet;
+} */
+
+/* p:empty {
+height: 10px;
+background: red;
+} */
+
+/* УРОК 3 */
+/* .input-dark {
+background: #4e4c4c;
+} */
+/* (по атрибуту) */
+/* .input-dark[required] {
+background: #9b0808;
+} */
+
+/* .input-dark[type='number'] {
+background: #23a81e;
+} */
+
+/* (по значенню атрибута,якщо значень багато) */
+/* .small-img[alt~='small'] {
+height: 500px;
+} */
+/*
+a[rel~='external'] {
+color: green;
+} */
+/* .card[class~='img'] {
+height: 500px;
+} */
+
+/* (по заченню атрибута(але значення єдине) */
+/* button[class|='btn'] {
+background: rgb(192, 130, 130);
+} */
+
+/* (по початку вказаного значення атрибута) */
+/* a[class^='btn'] {
+background: rgb(71, 2, 2);
+} */
+
+/* (по кусочку з назви значення атрибута) */
+/* a[class*='btn'] {
+background: rgb(71, 2, 2);
+} */
+
+/* (кусок в кінці значення атрибута) */
+/* a[class$='big'] {
+background: rgb(20, 3, 117);
+} */
+
+/* (для першої літери елемнта) */
+/* .btn::first-letter {
+color: red;
+} */
+/*
+(для першого рядка тексту елемента) */
+/* .big-text::first-line {
+color: red;
+} */
+
+/* (для стилізації тексту плейсхолдера) */
+/* .input-dark::placeholder {
+color: green;
+background: blue;
+} */
+
+/* (дає можливість вказати контент попереду
+основного контенту і надати йому стилізацію) */
+/* .big-text::before,
+.big-text::after { */
+/* (дає можливість вказати контент після
+основного контенту і надати йому стилізацію) */
+/* content: '$$$';
+color: #23a81e;
+background: red;
+} */
+
+/* (дає можливість вказати контент після
+основного контенту і надати йому стилізацію) */
+
+/* УРОК 4 */
+
+/* (якір) */
+#test:target {
+color: red;
+}
+
+/* (якщо ще не заходили по посиланню) */
+.link:link {
+color: red;
+}
+/* (селектор наведення мишкою) */
+.link:hover {
+color: green;
+}
+
+/* .card:hover {
+background: green;
+} */
+
+/* (дія при натисканні) */
+.link:active {
+color: purple;
+}
+
+.card:active {
+background-color: purple;
+}
+
+input {
+background-color: gray;
+}
+/* (майже теж саме що active, дія при фокусі) */
+input:focus {
+background-color: red;
+}
+
+/* (якщо дія з тегим чи його дочірнім тегом) */
+.card:focus-within {
+background: red;
+}
+/*
+(діє при вказаному lang) */
+.card:lang(en) > span:after {
+content: ' (en) ';
+}
+
+button {
+background-color: greenyellow;
+}
+
+/* (якщо тег увімкнений там немає значення disabled) */
+button:enabled {
+background-color: green;
+}
+
+/* (якщо тег вимкнений) */
+button:disabled {
+background-color: gray;
+}
+
+/* (якщо у форму можемо вводити значення ) */
+.inp:read-write {
+background-color: blue;
+color: white;
+}
+
+/* (якщо виключена форма або тільки для читання) */
+.inp:read-only {
+background-color: red;
+}
+
+/* (вибирає відмічений тег) */
+input[type='checkbox']:checked ~ span {
+background: red;
+}
+
+/* (для поля яке прошйло валідацію і є валідним) */
+.valid:valid {
+background: yellow;
+}
+
+/* (для не валідної форми) */
+.valid:invalid {
+background: goldenrod;
+}
+
+/* (необовязкове поле) */
+.valid:optional {
+background: green;
+}
+
+.number:focus {
+background: gray;
+}
+
+/* (якщо виходить за межі діапазона) */
+.number:out-of-range {
+background: red;
+}
+
+/* (якщо в межах діапазона) */
+.number:in-range {
+background-color: aqua;
+}
+
+.number:invalid {
+background: yellow;
+}
+
+/* (при плейсхолдері) */
+input:placeholder-shown ~ span {
+background: pink;
+} --}}
+
+
+
+{{!--
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+--}}
+
+
+
+{{!-- <section class="p-5 box">
+    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
+    <h2 id="user">USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h2>
+
+
+    <button type="button" class="button" id="button">Купити</button>
+
+    <p class="user">Link</p>
+</section>
+
+<section class="p-5 box">
+    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
+
+
+    <p class="user">Link</p>
+</section>
+
+<section class="p-5 box">
+    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
+    <em>TEST</em>
+
+    <p class="user">Link</p>
+    <p class="user">Link</p>
+</section>
+
+<footer class="p-5 box">
+    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
+
+
+    <p class="user">
+        <em>Test em</em>
+    </p>
+
+    <div>
+        <div>
+            <div>
+                <em class="child">EM EM</em>
+            </div>
+        </div>
+    </div>
+
+    <div class="child">EM EM</div>
+</footer> --}}
+
+
+
+{{!-- урок 2
+<div class="card p-5 m-5 card-dark">
+
+    <div class="item">first</div>
+    <p class="item">second</p>
+    <article class="item">tthird</article>
+    <strong class="item">strong</strong>
+    <div class="item">first</div>
+    <p class="item">second</p>
+    <p></p>
+    <article class="item">tthird</article>
+    <p class="item">second</p>
+    <p class="item">second</p>
+    <div class="item">first</div>
+</div> --}}
+
+
+{{!-- /* УРОК 3 */ --}}
+
+{{!-- <div class="card p-5 m-5 card-dark">
+    <input class="input-dark p-5" placeholder="this is text" required>
+    <input class="input-dark" type="number">
+
+</div> --}}
+
+{{!-- <div class="card p-5 m-5 card-dark">
+    <img alt="image small card 100px" class="small-img" src="https://picsum.photos/200/300" height="100px">
+    <a href="https://picsum.photos/200/300" rel="external">link</a>
+    <button class="btn">click</button>
+    <br>
+    <br>
+    <a href="https://picsum.photos/200/300" class="btn btn-secondary">click</a>
+
+</div>
+<div class="card p-5 m-5 card-dark">
+    <p class="big-text">
+        this is text this is text this<br> is text this is text this is text
+    </p>
+</div> --}}
+
+
+
+{{!-- УРОК 4 --}}
+
+
+<div lang="fr" class="card p-5 m-5 card-dark">
+    <a class="link"
+        href="https://ru.wikipedia.org/wiki/Google_(%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F)">click</a>
+</div>
+
+<div lang="en" id="test" class="card p-5 m-5 card-dark">
+    <input>
+    <span>fasfa</span>
+    <button>Test button</button>
+</div>
+
+<div class="p-5 m-5 card-dark">
+    <button>Test button</button>
+    <button disabled>Disabled button</button>
+</div>
+
+<div class="p-5 m-5 card-dark">
+    <input class="inp">
+    <div class="mt-5">
+        <div>
+            <input type="checkbox" checked>
+            <span>Check1</span>
+        </div>
+        <div>
+            <input type="checkbox">
+            <span>check2</span>
+        </div>
+    </div>
+</div>
+
+<div class="p-5 m-5 card-dark">
+    <div>
+        <input type="email" class="valid" placeholder="test">
+        <span>Test</span>
+    </div>
+    <div class="mt-5">
+        <input type="number" min="10" max="20" required class="number">
+    </div>
+
+</div>
+
+
+
+{{!--
+Цей код містить лише те, що буде виводитись в
+
+<body>
+    Адже наш layout/default.hbs має вже структуру HTML
+    --}}
