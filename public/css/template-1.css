@@ -8,6 +8,7 @@
 }
 .header {
   padding: 24px;
+  border-bottom: 1px solid #c8ced4;
 }
 
 .logo {
@@ -57,7 +58,8 @@
 }
 
 .footer {
-  padding: 24px;
+  padding: 24px 0;
+  border-top: 1px solid #c8ced4;
 }
 
 .footer_copyright {
@@ -90,6 +92,8 @@
   text-align: center;
   max-width: 585px;
   margin: 0 auto;
+
+  line-height: 150%;
 }
 
 .plans_card:not(:last-of-type) {
@@ -115,6 +119,8 @@
 .card_price_duration {
   font-size: 29px;
   color: #6c757d;
+
+  vertical-align: 10px;
 }
 
 .card_block {
@@ -142,4 +148,55 @@
   width: 100%;
   font-size: 19px;
   padding: 9px;
+}
+
+.card {
+  border: 2px solid blue;
+  border-radius: 50px;
+}
+
+.card:hover {
+  outline: 2px solid blue;
+  outline-offset: 5px;
+  box-shadow: 5px 5px 10px 1px rgba(40, 42, 67, 0.682);
+  cursor: not-allowed;
+}
+
+.btn {
+  border-radius: 25px;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 10px 1px rgba(40, 42, 67, 0.682);
+  cursor: pointer;
+}
+
+h1 {
+  text-shadow: 0px 0px 10px rgba(105, 6, 6, 0.723);
+}
+
+.plans_card:nth-child(2) {
+  visibility: collapse;
+}
+
+.hero_text {
+  background: gray;
+
+  width: 200px;
+  hyphens: manual;
+  word-spacing: 10px;
+  overflow: auto;
+  resize: horizontal;
+}
+
+.hero_title {
+  max-width: 660px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  height: 65px;
+  overflow: hidden;
+}
+
+.overflow {
+  overflow-wrap: break-word;
 }
