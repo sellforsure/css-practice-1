@@ -1,0 +1,50 @@
+<header class="header">
+	<div>
+		{{>logo}}
+	</div>
+	<nav class="header_nav">
+		<div class="header_nav_right">
+			{{>nav list=header}}
+		</div>
+	</nav>
+</header>
+
+{{#with main}}
+{{>mainTemplate4 data=this}}
+{{/with}}
+
+
+<main class="featured">
+	{{#each featured}}
+	{{>cardFeatured data=this}}
+	{{/each}}
+</main>
+
+<div class="action">
+	{{#each actions}}
+	<div class="action_form">
+		<h3 class="action_title">{{heading}}</h3>
+		<a href="{{url}}" class="action_button">{{text}}</a>
+	</div>
+	{{/each}}
+</div>
+
+
+
+
+
+<footer class="footer">
+	<div>
+		{{>logo}}
+		<span class="footer_copyright">Copyright 2023-2024</span>
+	</div>
+
+	{{#each footer}}
+	<div>
+		<span class="footer_title">
+			{{title}}
+		</span>
+		{{>nav list=links isVertical=true}}
+	</div>
+	{{/each}}
+</footer>
