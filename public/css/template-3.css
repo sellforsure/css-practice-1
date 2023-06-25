@@ -46,7 +46,7 @@
   --border-radius: 12px;
 
   --weight-title: 500;
-  --weight-text: var(--weight-text);
+  --weight-text: 400;
 
   --page-width: 960px;
 }
