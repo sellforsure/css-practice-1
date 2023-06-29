@@ -1,0 +1,113 @@
+<header class="header">
+	<a href="#test">
+		{{>logo}}
+	</a>
+	<nav class="header_nav">
+		<div class="header_nav_right">
+			{{>nav list=header}}
+		</div>
+	</nav>
+</header>
+
+
+
+<main class="main">
+	<div class="info">
+		{{#with info}}
+		<h1 class="info_title">{{title}}</h1>
+		<p class="info_description">{{description}}</p>
+		{{/with}}
+	</div>
+
+
+	<form class="form">
+		{{#with form}}
+
+		{{#each inputs}}
+		<div class="form_input_list">
+
+			<input type="{{type}}" class="form_input" placeholder="{{placeholder}}" id="{{id}}" name="{{name}}">
+
+		</div>
+		{{/each}}
+
+
+		<div class="form_checkbox">
+			{{#with checkbox}}
+			<input type="checkbox" name="{{name}}">
+			<label for="{{name}}">{{label}}</label>
+			{{/with}}
+		</div>
+
+		<button type="submit" class="form_button">{{button}}</button>
+
+
+		<div class="form_info">{{info}}</div>
+		{{/with}}
+	</form>
+
+</main>
+
+
+
+<div class="updates">
+	{{#with updates}}
+	<div>
+		<h2 class="updates_title">{{title}}</h2>
+	</div>
+
+
+
+	{{#each list}}
+	<div class="list">
+		<div class="image"></div>
+		<div class="updates_list">
+			<div class="updates_nickname">{{nickname}}</div>
+			<p class="updates_description">{{description}}</p>
+		</div>
+	</div>
+	{{/each}}
+
+
+	<a href="{{show_all.url}}" class="updates_link">{{show_all.text}}</a>
+	{{/with}}
+</div>
+
+
+
+<div class="expirience">
+	{{#with expirience}}
+	<h2 class="expirience_title">
+
+		{{title}}
+		<p class="expirience_badge">{{badge}}</p>
+
+	</h2>
+	<div class="expirience_list">
+		{{#each list}}
+		<div class="expirence_card">
+			<div class="expirience_name">{{name}}</div>
+			<p class="expirience_details">{{details}}</p>
+		</div>
+		{{/each}}
+	</div>
+	{{/with}}
+</div>
+
+
+
+<footer class="footer" id="test">
+	<div>
+		{{>logo}}
+		<span class="footer_copyright">Copyright 2023-2024</span>
+	</div>
+
+	{{#each footer}}
+	<div>
+		<span class="footer_title">
+			{{title}}
+		</span>
+		{{>nav list=links isVertical=true}}
+	</div>
+	{{/each}}
+</footer>
