@@ -1,0 +1,12 @@
+{{#with data}}
+<div class="articles_card">
+	<img src="{{photo}}" alt="photo" id="{{id}}" class="articles_card_image">
+	{{#if isNew}}
+	<p class="articles_card_image_new">New</p>
+	{{/if}}
+
+	<h3 class="articles_card_name">{{name}}</h3>
+	<p class="articles_card_description">{{description}}</p>
+	<button class="articles_card_button">Read all</button>
+</div>
+{{/with}}
