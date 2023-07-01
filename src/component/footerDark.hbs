@@ -1,0 +1,10 @@
+{{#with data}}
+<div>
+	<div class="nav {{#if isVertical}}nav_vertical{{else}}nav_inline{{/if}}">
+		{{#each pages}}
+		<a class="nav_link" href="{{path}}">{{name}}</a>
+		{{/each}}
+	</div>
+</div>
+<span class="footer_copyright">{{copyright}}</span>
+{{/with}}
