@@ -289,6 +289,7 @@
   align-items: center;
 
   border-radius: var(--space-l);
+  position: relative;
 }
 
 .articles_card_image_new {
@@ -301,9 +302,9 @@
   font-weight: var(--weight-title);
   display: block;
 
-  position: relative;
-  left: 302px;
-  bottom: 50px;
+  left: 1000px;
+  bottom: 400px;
+  position: absolute;
 }
 
 .articles_card_name {
